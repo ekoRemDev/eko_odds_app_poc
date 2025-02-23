@@ -21,7 +21,7 @@ class GamesCubit extends Cubit<GamesState> with WidgetsBindingObserver {
   bool _isAppInBackground = false;
 
   Future<void> gamesList() async {
-    emit(state.copyWith(isMatchListLoading: true));
+    // emit(state.copyWith(isMatchListLoading: true));
     await _getGamesList();
     if (!_isAppInBackground) {
       await _startPolling();
@@ -29,7 +29,7 @@ class GamesCubit extends Cubit<GamesState> with WidgetsBindingObserver {
   }
 
   Future<void> _startPolling() async {
-    emit(state.copyWith(isMatchListLoading: true));
+    // emit(state.copyWith(isMatchListLoading: true));
     // Prevent multiple polling timers
     if (_pollingTimer?.isActive ?? false) return;
 

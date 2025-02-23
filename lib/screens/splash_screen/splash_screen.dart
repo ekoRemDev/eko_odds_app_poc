@@ -1,4 +1,3 @@
-import 'package:eko_assignment/screens/games_screen/games_screen.dart';
 import 'package:eko_assignment/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,8 +29,8 @@ class _SplashScreenViewState extends State<_SplashScreenView> {
       await Future<void>.delayed(const Duration(milliseconds: 1000));
 
       if (mounted) {
-        // context.pushReplacementNamed(LoginScreen.routeName);
-        context.pushReplacementNamed(GamesScreen.routeName);
+        context.pushReplacementNamed(LoginScreen.routeName);
+        // context.pushReplacementNamed(GamesScreen.routeName);
       }
     });
   }

@@ -2,7 +2,7 @@ name: eko_assignment
 description: "Assignment App"
 publish_to: 'none'
 
-version: 0.1.0+1
+version: 0.1.0+3
 
 environment:
   sdk: ^3.5.4
