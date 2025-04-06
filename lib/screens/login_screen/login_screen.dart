@@ -1,4 +1,5 @@
 import 'package:eko_assignment/main.dart';
+import 'package:eko_assignment/screens/chains_screen/chains_screen.dart';
 import 'package:eko_assignment/screens/games_screen/games_screen.dart';
 import 'package:eko_assignment/screens/login_screen/_widgets/biometric_login_button.dart';
 import 'package:eko_assignment/screens/login_screen/_widgets/login_button.dart';
@@ -34,7 +35,8 @@ class _LoginScreenState extends State<LoginScreen> {
           listener: (context, authState) {
             if (authState.isLoggedIn == true) {
               appLogger.i('User is logged in');
-              context.goNamed(GamesScreen.routeName);
+              // context.goNamed(GamesScreen.routeName);
+              context.goNamed(ChainsScreen.routeName);
             } else if (authState.isLoggedIn == false) {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Cannot Login..')),

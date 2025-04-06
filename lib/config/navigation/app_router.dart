@@ -1,4 +1,5 @@
 import 'package:eko_assignment/main.dart';
+import 'package:eko_assignment/screens/chains_screen/chains_screen.dart';
 import 'package:eko_assignment/screens/games_screen/games_screen.dart';
 import 'package:eko_assignment/screens/login_screen/login_screen.dart';
 import 'package:eko_assignment/screens/splash_screen/splash_screen.dart';
@@ -59,6 +60,15 @@ class AppRouter {
           context: context,
           state: state,
           child: const GamesScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/${ChainsScreen.routeName}',
+        name: ChainsScreen.routeName,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const ChainsScreen(),
         ),
       ),
     ],
